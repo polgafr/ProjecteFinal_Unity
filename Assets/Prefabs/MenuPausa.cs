@@ -7,10 +7,14 @@ public class MenuPausa : MonoBehaviour
 {
     bool isPause = false;
     public GameObject menu;
+    private float m_OldRotation;
+    private Rigidbody thisRigidbody;
+
 
     // Use this for initialization
     void Start()
     {
+        thisRigidbody = GetComponent<Rigidbody>();
 
     }
 
@@ -53,7 +57,13 @@ public class MenuPausa : MonoBehaviour
 
     public void restart()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(8);
+    }
+
+    public void restartCheck()
+    {
+        m_OldRotation = 0;
+        thisRigidbody.transform.position = CheckPoint.GetActiveCheckPointPosition();
     }
 
 }
