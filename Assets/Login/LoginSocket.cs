@@ -127,7 +127,7 @@ public class LoginSocket : MonoBehaviour {
         {
             //noti.text = "Correcto";
             StartCoroutine(mostrar("Correcto"));
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
         }
         else
         {
