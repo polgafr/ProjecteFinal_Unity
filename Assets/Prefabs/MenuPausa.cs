@@ -57,7 +57,7 @@ public class MenuPausa : MonoBehaviour
 
     public void restart()
     {
-        SceneManager.LoadScene(8);
+        SceneManager.LoadScene(4);
     }
 
     public void restartCheck()

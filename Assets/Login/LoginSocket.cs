@@ -47,12 +47,12 @@ public class LoginSocket : MonoBehaviour {
 				entrada = new StreamReader(theStream);
 				socketReady = true;
             //noti.text = "Conectado";
-            mostrar("Conectado");
+            mostrar("Connected");
 			}
 			catch (Exception e) {
 				Debug.Log("Socket error: " + e);
             //noti.text = "Error de conexion con el servidor";
-            StartCoroutine(mostrar("Error de conexion con el servidor"));
+            StartCoroutine(mostrar("Server connexion error"));
 			}	
 	//	} while(!socketReady);
 
@@ -82,7 +82,7 @@ public class LoginSocket : MonoBehaviour {
 		catch (Exception e) {
 			Debug.Log("Socket error: " + e);
             //noti.text = "Error de conexion con el servidor";
-            StartCoroutine(mostrar("Error de conexion con el servidor"));
+            StartCoroutine(mostrar("Server connexion error"));
         }	
 		//	} while(!socketReady);
 
@@ -126,13 +126,13 @@ public class LoginSocket : MonoBehaviour {
         if (cadena == "true")
         {
             //noti.text = "Correcto";
-            StartCoroutine(mostrar("Correcto"));
+            StartCoroutine(mostrar("Correct"));
             SceneManager.LoadScene(0);
         }
         else
         {
             //noti.text = "Usuario o Contraseña incorrecta";
-            StartCoroutine(mostrar("Usuario o Contraseña incorrecta"));
+            StartCoroutine(mostrar("Wrong user and password "));
         }
     }
 

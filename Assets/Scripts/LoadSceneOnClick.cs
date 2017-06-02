@@ -11,4 +11,9 @@ public class LoadSceneOnClick : MonoBehaviour {
         SceneManager.LoadScene(sceneIndex);
     }
 
+    public void cerrarJuego()
+    {
+        Application.Quit();
+    }
+
 }

@@ -47,12 +47,12 @@ public class RegiSocket : MonoBehaviour {
 				entrada = new StreamReader(theStream);
 				socketReady = true;
             //noti.text = "Conectado";
-            mostrar("Conectado");
+            mostrar("Connected");
 			}
 			catch (Exception e) {
 				Debug.Log("Socket error: " + e);
             //noti.text = "Error de conexion con el servidor";
-            StartCoroutine(mostrar("Error de conexion con el servidor"));
+            StartCoroutine(mostrar("Server connexion error"));
 			}	
 	//	} while(!socketReady);
 
@@ -81,7 +81,7 @@ public class RegiSocket : MonoBehaviour {
 		catch (Exception e) {
 			Debug.Log("Socket error: " + e);
             //noti.text = "Error de conexion con el servidor";
-            StartCoroutine(mostrar("Error de conexion con el servidor"));
+            StartCoroutine(mostrar("Server connexion error"));
         }	
 		//	} while(!socketReady);
 
@@ -136,7 +136,7 @@ public class RegiSocket : MonoBehaviour {
         if (cadena == "true")
         {
             //noti.text = "Correcto";
-            StartCoroutine(mostrar("Correcto"));
+            StartCoroutine(mostrar("Correct"));
             SceneManager.LoadScene(0);
         }
         else
@@ -144,14 +144,14 @@ public class RegiSocket : MonoBehaviour {
             if (cadena == "excorreo")
             {
 
-                StartCoroutine(mostrar("Correo ya existente"));
+                StartCoroutine(mostrar("Existing email"));
             }
             else
             {
                 if (cadena == "exusuario")
                 {
 
-                    StartCoroutine(mostrar("Usuario ya existente"));
+                    StartCoroutine(mostrar("Existing user"));
 
                 }                
                     
